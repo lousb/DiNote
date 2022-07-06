@@ -1,0 +1,18 @@
+.footer-wrap{
+    background-image: url(background-doodle.png);
+    font-family: 'Ubuntu Condensed', sans-serif;
+    color: white;
+    width: 100%;
+    position: absolute;
+    border-radius: 25px 25px 0 0;
+    border-right: #04724D 5px solid;
+    border-left: #04724D 5px solid;
+    border-top: #04724D 5px solid;
+    margin-top:25vh;
+}
+.footer-list{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 20px;
+}

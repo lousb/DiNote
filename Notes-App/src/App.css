@@ -1,0 +1,277 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+
+* {
+  box-sizing: border-box;
+}
+
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #56876D;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #56876D;
+  border-radius: 10px;
+}
+
+body,
+.note-App {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100%;
+  height: 70vh;
+  font-size: 16px;
+  background-color: #BDBEA9;
+  transform-origin: top left;
+  transform: scale(100%);
+}
+
+button {
+  background: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  color: #08c;
+}
+
+.note-App {
+  display: flex;
+}
+
+
+.app-sidebar {
+  width: 30%;
+  height: 100vh;
+  border-right: 1px solid #ddd;
+  background-color: #8DB38B;
+  border-radius: 25px;
+  border: 5px solid white;
+  
+}
+
+.app-sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  background-color: #BDBEA9;
+  border-radius: 25px 25px 0 0;
+}
+.app-sidebar-header h1 {
+  margin: 0;
+  color: white;
+}
+
+.app-sidebar-notes {
+  height: calc(100vh - 78px);
+  overflow-y: scroll;
+  
+}
+.app-sidebar-note {
+  padding: 25px;
+  cursor: pointer;
+}
+.sidebar-note-title {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+.app-sidebar-note button {
+  color: crimson;
+}
+.app-sidebar-note p {
+  margin: 10px 0;
+  color: white;
+}
+.app-sidebar-note small {
+  display: block;
+  color: white;
+}
+
+.app-sidebar-note:hover {
+  background: #56876D;
+  border-radius: 25px;
+  font-size: 18px;
+}
+.app-sidebar-note.active,
+.app-sidebar-note.active small {
+  background: #04724D;
+  color: white;
+  border-radius: 25px;
+}
+
+.app-main {
+  width: 70%;
+  height: 100vh;
+}
+.app-main-note-edit{
+  height: 50vh;
+}
+
+.no-active-note {
+  width: 70%;
+  height: 100vh;
+  line-height: 100vh;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+}
+
+.app-main-note-edit {
+  padding: 25px;
+  height: 400px;
+}
+
+.app-main-note-edit input,
+textarea {
+  display: block;
+  border: 5px solid #ddd;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 80vh;
+  padding: 10px;
+  resize: none;
+  font-size: inherit;
+  font-family: inherit;
+  background-color: #D2AB99;
+  border-radius: 25px;
+}
+.app-main-note-edit input {
+  height: 50px;
+  font-size: 2rem;
+}
+
+.app-main-note-preview {
+  border-top: 1px solid #ddd;
+  overflow-y: scroll;
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.preview-title {
+  padding: 25px 25px 0 25px;
+  margin: 0;
+}
+
+.markdown-preview {
+  padding: 0 25px 25px 25px;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+ul{
+  margin: 0% ;
+}
+li{
+  display: inline-block;
+  padding: 0%;
+  margin: 0% ;
+}
+.app-logo{
+  height: 150px;
+  padding-top: 20px;
+}
+button{
+  padding: 5px 10px;
+  border: transparent;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 25px;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+
+button:hover{
+  transform: scale(1.5);
+  transition: transform 0s;
+  cursor: pointer;
+}
+button:active{
+  font-size: 21px;
+}
+.header{
+  
+  font-size: 40px;
+  color: white;
+  font-family: 'Ubuntu Condensed', sans-serif;
+
+  margin:0;
+  border-right: #04724D 3px solid;
+  border-left: #04724D 3px solid;
+  /* border-radius: 0 0 25px 25px; */
+}
+.overlap{
+  background-color: #8DB38B;
+  border-radius: 0 0 25px 25px;
+  border-left: #04724D 5px solid;
+  border-right: #04724D 5px solid;
+  border-bottom: #04724D 5px solid;
+}
+.add-button{
+  background-color: #D2AB99;
+  border-bottom: #bb7f63 solid 3px;
+  border-radius: 0 0 25px 25px
+}
+.button-wrap{
+  background-color: #D2AB99;
+  border-radius: 0 0 25px 25px;
+}
+
+.head-button{
+  display: flex;
+  justify-content: center;
+}
+.head-button:hover{
+  margin-top:2px;
+  margin-bottom:2px;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.modal-container{
+  background-color: rgba(0,0,0,0.3);
+  opacity:0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left:0;
+  height:130vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal{
+  background-color: #56876D;
+  border-radius: 25px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  padding:30px 50px;
+  width: 600px;
+  max-width: 100%;
+  text-align: center;
+}
+.modal h1{
+  margin:0;
+  color: white;
+}
+.modal p{
+  font-size: 14px;
+  color: white;
+  opacity: 0.7;
+}
+.modal-container.show{
+  opacity: 1;
+  pointer-events: auto;
+}
